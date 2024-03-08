@@ -8,4 +8,4 @@ resources:
 images:
 - name: app-sensor
   newName: manscalh/app-sensor
-  newTag: 0d0785fc89387aef5ce53993609a53b817f7fd86
+  newTag: 73bc449b6f12487ec11d04a8c095c49315c3692f
