@@ -15,3 +15,11 @@ services:
       - ./envs:/home/node/app/envs
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    networks:
+      - uea-network
+
+
+networks: 
+  uea-network:
+    external: true
+

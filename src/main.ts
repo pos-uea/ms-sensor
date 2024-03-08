@@ -27,7 +27,7 @@ async function bootstrap() {
 
 
   await app.listen().then(() => {
-    logger.log('Microservice is listening');
+    logger.log('Microservice is listening',process.env.NODE_ENV,process.env.RMQ_URL);
   });
 
 }

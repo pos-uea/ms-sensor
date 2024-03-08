@@ -23,8 +23,7 @@ export class ClientProxyRadioFrequency {
         return ClientProxyFactory.create({
             transport: Transport.RMQ,
             options: {
-                // urls: [`${this.protocol}://${this.user}:${this.password}@${this.host}`],
-                urls: ["amqp://admin:admin@rabbitmq:5672/radiofrequencia"],
+                urls: [`${this.protocol}://${this.user}:${this.password}@${this.host}`],
                 queue: 'users'
             },
         })
@@ -35,7 +34,7 @@ export class ClientProxyRadioFrequency {
         return ClientProxyFactory.create({
             transport: Transport.RMQ,
             options: {
-                urls: ["amqp://admin:admin@rabbitmq:5672/radiofrequencia"],
+                urls: [`${this.protocol}://${this.user}:${this.password}@${this.host}`],
                 noAck: false,
                 queue: 'sensors'
             }
@@ -47,7 +46,7 @@ export class ClientProxyRadioFrequency {
         return ClientProxyFactory.create({
             transport: Transport.RMQ,
             options: {
-                urls: ["amqp://admin:admin@rabbitmq:5672/radiofrequencia"],
+                urls: [`${this.protocol}://${this.user}:${this.password}@${this.host}`],
                 queue: 'notifications'
             }
         })
