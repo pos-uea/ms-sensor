@@ -17,35 +17,35 @@ EXPOSE 3001
 
 CMD [ "tail", "-f", "/dev/null" ]
 
-FROM node:20.11-slim as builder
+# FROM node:20.11-slim as builder
 
-USER node
+# USER node
 
-RUN mkdir /home/node/app_sensor
+# RUN mkdir /home/node/app_sensor
 
-WORKDIR /home/node/app_sensor
+# WORKDIR /home/node/app_sensor
 
-COPY --chown=node:node --from=development /home/node/app_sensor ./
-RUN npm run build
+# COPY --chown=node:node --from=development /home/node/app_sensor ./
+# RUN npm run build
 
-ENV NODE_ENV production
+# ENV NODE_ENV production
 
-RUN npm ci --only=production
+# RUN npm ci --only=production
 
-FROM node:20.11-slim as production
+# FROM node:20.11-slim as production
 
-USER node
+# USER node
 
-RUN mkdir /home/node/app_sensor
+# RUN mkdir /home/node/app_sensor
 
-WORKDIR /home/node/app_sensor
+# WORKDIR /home/node/app_sensor
 
-COPY --chown=node:node --from=builder /home/node/app_sensor/dist ./dist
-COPY --chown=node:node --from=builder /home/node/app_sensor/node_modules ./node_modules
-COPY --chown=node:node --from=builder /home/node/app_sensor/package.json ./
+# COPY --chown=node:node --from=builder /home/node/app_sensor/dist ./dist
+# COPY --chown=node:node --from=builder /home/node/app_sensor/node_modules ./node_modules
+# COPY --chown=node:node --from=builder /home/node/app_sensor/package.json ./
 
-EXPOSE 3001
+# EXPOSE 3001
 
-ENV NODE_ENV production
+# ENV NODE_ENV production
 
-CMD [ "npm", "run", "start:prod" ]
+# CMD [ "npm", "run", "start:prod" ]

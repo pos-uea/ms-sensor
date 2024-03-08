@@ -19,4 +19,4 @@ spec:
         imagePullPolicy: Always
         resources:
         ports:
-        - containerPort: 3000
+        - containerPort: 3001
