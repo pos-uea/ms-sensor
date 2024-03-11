@@ -47,6 +47,7 @@ export class ClientProxyRadioFrequency {
             transport: Transport.RMQ,
             options: {
                 urls: [`${this.protocol}://${this.user}:${this.password}@${this.host}`],
+                noAck: false,
                 queue: 'notifications'
             }
         })

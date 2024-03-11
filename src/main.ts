@@ -15,7 +15,8 @@ async function bootstrap() {
 
   await tracer;
   
-  const app = await NestFactory.createMicroservice(AppModule,{
+  const app = await NestFactory.createMicroservice(AppModule,
+    {
     transport: Transport.RMQ,
     options: {
       urls: [`${protocol}://${user}:${password}@${host}`],
