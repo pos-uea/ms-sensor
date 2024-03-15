@@ -114,8 +114,5 @@ export class SensorController {
         
     }
 
-
-
-
 }
 

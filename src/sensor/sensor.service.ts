@@ -36,7 +36,6 @@ export class SensorService {
 
   async getSensorByCode(sensorCode: string): Promise<ISensor> {
     try {
-      console.log(`sensorCode: ${sensorCode}`);
       
       return await this.appModel.findOne({ code: sensorCode }).exec();
     } catch (error) {
@@ -56,13 +55,12 @@ export class SensorService {
 
   async findAllSensors(): Promise<ISensor[]> {
     try {
-      
       return await this.appModel.find().exec();
     } catch (error) {
       this.logger.error(`error: ${JSON.stringify(error.message)}`);
       throw new RpcException(error.message);
     }
   }
-
+  
 }
 

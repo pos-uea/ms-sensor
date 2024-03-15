@@ -9,6 +9,7 @@ import { GatewaysModule } from './gateway/gateway.module';
 import { GatewaySchema } from './gateway/intefaces/gateway.schema';
 import { GatewayAdminModule } from './gateway_admin/gateway_admin.module';
 import { NotificationAdminModule } from './notification_admin/notification_admin.module';
+
 const password = encodeURIComponent("Jujutsu@2024");
 
 @Module({
