@@ -3,6 +3,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { Transport } from '@nestjs/microservices';
 import { Logger } from '@nestjs/common';
+import { log } from 'console';
 
 const logger = new Logger('Main');
 
@@ -25,6 +26,9 @@ async function bootstrap() {
     },
   });
 
+
+  console.log('NODE_ENV');
+  
 
 
   await app.listen().then(() => {
