@@ -27,7 +27,7 @@ async function bootstrap() {
   });
 
 
-  console.log('NODE_ENV');
+  console.log('NODE_ENV x');
   
 
 
